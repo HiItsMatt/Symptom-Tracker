@@ -1,0 +1,208 @@
+/* Navbar styles for mobile and desktop views */
+
+body {
+    position: fixed; /* Prevent body from scrolling */
+    width: 100vw;
+    overflow: hidden; /* Prevent scrolling */
+    height: 100vh; /* Prevent vertical scrolling */
+}
+
+/*mobile navbar styles*/
+.mobile-navbar {
+    /* Hide the mobile navbar by default */
+    display: none;
+
+    /*positioning and size*/
+    top: -110vh;
+    position: fixed; /* Fixed position for mobile navbar */
+    width: 100vw; /* Full width for mobile navbar */
+    height: 100vh; /* Full height navigation screen */
+    background-color: #282c34; 
+    color: white;
+    z-index: 1001; /* Ensure it appears above other content */
+    padding: 10px 0; /* Padding for mobile navbar */
+    transition: top 0.5s ease; /* Smooth transition for dropdown */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+/* When the menu is open */
+.mobile-navbar.open {
+    top: 0; /* Slide down into view */
+}
+
+.lineSpacer{
+    height: 1px;
+    width: 80vw; /* Full width for line spacer */
+    background: white;
+}
+
+.mobileSelected{
+    display: flex;
+    align-items: center; /* Vertically center items */
+    font-size: 8vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 2vh;
+    color: white;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5vw;
+    background-color: #21242b; /* Background color for selected option */
+}
+
+.mobileOption{
+    display: flex;
+    align-items: center; /* Vertically center items */
+    font-size: 8vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 2vh;
+    color: white;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5vw;
+}
+
+.mobile-nav-button {
+    position: fixed; /* Fixed position for mobile navbar */
+    top: 10vw;
+    left: 10vw;
+    width: 15vw;
+    height: 15vw;
+    background-color: #282c34; /* Background color for mobile navbar button */
+    font-size: x-large;
+    border-radius: 5vw;
+    color: white;
+    display: flex; /* Use Flexbox for alignment */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+.mobileOption-icon{
+    margin: 1vh;
+    border-radius: 5vh;
+    height: 10vw;
+    width: 10vw;
+}
+
+.selectedSite{
+    flex-grow: 1; /* Make each link take up equal space */
+    color: white; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s ease; /* Smooth hover effect */
+    background-color: #21242b;; /* Background color */
+    padding: 10px;
+    text-align: center;
+}
+
+.siteOption {
+    flex-grow: 1; /* Make each link take up equal space */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s ease; /* Smooth hover effect */
+    padding: 10px;
+    text-align: center;
+}
+
+.siteOption:hover {
+    color: #00bcd4; /* Change color on hover */
+}
+
+.selectedSite:hover {
+    color: #00bcd4; /* Change color on hover */
+}
+  
+.navbar a:hover {
+    color: #00bcd4; /* Change color on hover */
+}
+
+/* Hide desktop navbar on smaller screens */
+@media (max-width: 1024px) {
+    .desktop-navbar {
+        display: none; /* Hide the desktop navbar */
+    }
+
+    .mobile-navbar {
+        display: flex; /* Show the mobile navbar */
+    }
+}
+
+.desktop-navbar {
+    /*positioning and size*/
+    position: fixed;
+    top: -18vh;
+    left: 0;
+    width: 100vw;
+    height: 20vh;
+
+    /*colouring*/
+    background-color: #282c34; 
+    
+    /* Flexbox */
+    display: flex;
+    align-items: stretch;
+    transition: 0.25s ease; /* Smooth transition for dropdown */
+}
+
+.desktop-navbar:hover{
+    top: 0; /* Slide down into view */
+}
+
+.navButton {
+    flex-grow: 1; /* Make each button take up equal space */
+    display: flex; /* Use Flexbox for alignment */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    transition: 0.25s ease; /* Smooth transition for hover effect */
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    font-size: 2vw; /* Font size for desktop navbar */
+    font-weight: bold; /* Bold text */
+    color: white; /* Text color */
+}
+
+.navButton:hover{
+    flex-grow: 3; /* Make each button take up equal space */
+}
+
+#simpleWeatherButton{
+    background-color: #0000a0;
+}
+
+#teslaTrackerButton{
+    background-color: #a00000;
+}
+
+#mattButton{
+    background-color: #00a000;
+}
+
+#symptomTrackerButton{
+    background-color: #a0a000;
+}
+
+#simpleWeatherButton:hover{
+    background-color: #0000ff;
+    color: black;
+}
+
+#teslaTrackerButton:hover{
+    background-color: #ff0000;
+    color: black;
+}
+
+#mattButton:hover{
+    background-color: #00ff00;
+    color: black;
+}
+
+#symptomTrackerButton:hover{
+    background-color: #ffff00;
+    color: black;
+}
+
