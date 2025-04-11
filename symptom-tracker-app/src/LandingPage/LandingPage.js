@@ -16,54 +16,27 @@ const LandingPage = () => {
         if (mostRecentDate && savedData[mostRecentDate]) {
             setSymptoms(savedData[mostRecentDate]); // Load the most recent symptoms
         }
-
-        /* Uncomment this block to generate fake data for testing */
-        /*
-        const fakeData = {
-            "2025-04-08": [
-                { name: "Anxiety", severity: "3" },
-                { name: "Depression", severity: "2" },
-                { name: "Suicidal Thoughts", severity: "2" },
-                { name: "Insomnia", severity: "3" },
-                { name: "Appetite", severity: "3" },
-                { name: "Mood", severity: "8" },
-                { name: "Motivation", severity: "9" },
-                { name: "Stress", severity: "2" },
-                { name: "Sunlight", severity: "6" },
-                { name: "Exercise", severity: "2" },
-                { name: "Emotional Disregulation", severity: "1" }
-            ],
-            "2025-04-09": [
-                { name: "Anxiety", severity: "5" },
-                { name: "Depression", severity: "6" },
-                { name: "Suicidal Thoughts", severity: "3" },
-                { name: "Insomnia", severity: "6" },
-                { name: "Appetite", severity: "1" },
-                { name: "Mood", severity: "3" },
-                { name: "Motivation", severity: "3" },
-                { name: "Stress", severity: "5" },
-                { name: "Sunlight", severity: "3" },
-                { name: "Exercise", severity: "4" },
-                { name: "Emotional Disregulation", severity: "8" }
-            ],
-            "2025-04-10": [
-                { name: "Anxiety", severity: "2" },
-                { name: "Depression", severity: "2" },
-                { name: "Suicidal Thoughts", severity: "1" },
-                { name: "Insomnia", severity: "1" },
-                { name: "Appetite", severity: "5" },
-                { name: "Mood", severity: "8" },
-                { name: "Motivation", severity: "9" },
-                { name: "Stress", severity: "3" },
-                { name: "Sunlight", severity: "8" },
-                { name: "Exercise", severity: "8" },
-                { name: "Emotional Disregulation", severity: "3" }
-            ]
-        };
+        
+        window.insertFakeData = () => {
+            const fakeData = {
+                "2025-04-10": [
+                    { name: "Anxiety", severity: "3" },
+                    { name: "Depression", severity: "3" },
+                    { name: "Suicidal Thoughts", severity: "1" },
+                    { name: "Insomnia", severity: "2" },
+                    { name: "Low Appetite", severity: "6" },
+                    { name: "Low Mood", severity: "2" },
+                    { name: "Low Motivation", severity: "1" },
+                    { name: "Stress", severity: "3" },
+                    { name: "Emotional Disregulation", severity: "5" }
+                ]
+            };
     
-        // Save the fake data to localStorage
-        localStorage.setItem("symptomTracker", JSON.stringify(fakeData));
-        */
+            // Save the fake data to localStorage
+            localStorage.setItem("symptomTracker", JSON.stringify(fakeData));
+            console.log("Fake data inserted into localStorage:", fakeData);
+        };
+        
     }, []);
 
     
