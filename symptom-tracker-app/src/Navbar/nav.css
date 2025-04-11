@@ -187,22 +187,30 @@ body {
 }
 
 #simpleWeatherButton:hover{
-    background-color: #0000ff;
+    background-color: #a3fffa;
     color: black;
+    box-shadow: rgb(0, 174, 255) 0 0 50px ; /* Add blue shadow on hover */
+    z-index: -1000;
 }
 
 #teslaTrackerButton:hover{
-    background-color: #ff0000;
+    background-color: #ff6c6c;
     color: black;
+    box-shadow: rgb(255, 0, 0) 0 0 50px ; /* Add red shadow on hover */
+    z-index: -1000;
 }
 
 #mattButton:hover{
-    background-color: #00ff00;
+    background-color: #7eff7e;
     color: black;
+    box-shadow: rgb(0, 255, 0) 0 0 50px ; /* Add green shadow on hover */
+    z-index: -1000;
 }
 
 #symptomTrackerButton:hover{
-    background-color: #ffff00;
+    background-color: #ffff7a;
     color: black;
+    box-shadow: rgb(255, 255, 0) 0 0 50px ; /* Add yellow shadow on hover */
+    z-index: -1000;
 }
 
